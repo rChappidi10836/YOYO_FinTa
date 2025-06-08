@@ -1,0 +1,4 @@
+INDEX VERSION 1.132+D:\experiments\YOYO\FinTa\.metadata\.plugins\org.eclipse.jdt.core
+3413725848.index
+4248327163.index
+1865797976.index

@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FinTaApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Yes working");
 		SpringApplication.run(FinTaApplication.class, args);
 
 	}

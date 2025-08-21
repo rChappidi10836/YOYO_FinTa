@@ -10,26 +10,26 @@ import org.springframework.web.bind.annotation.*;
 public class users_controller {
 
     @Autowired
-    user userRepo;
+    usersRepository userRepo;
 
     @GetMapping("/hi")
     public String getcall(){
         return "hey darling I will always respond to you";
     }
 
-    @GetMapping("/")
+    @GetMapping("/get-users")
     public Iterable<users> getusers(){
         return userRepo.findAll();
     }
 
-    @PostMapping("/register")
+    @PostMapping("/register-user")
     public void adduser(@RequestBody users u){
         userRepo.save(u);
     }
 
-    @GetMapping('/finduser')
-    public users getUserbyId(@RequestParam int Id){
-        return userRepo.findById(Id);
-    }
+//    @GetMapping('/finduser')
+//    public users getUserbyId(@RequestParam int Id){
+//        return userRepo.findById(Id);
+//    }
 
 }

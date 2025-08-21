@@ -14,6 +14,7 @@ public class users {
     public String name;
     public String email;
     public int age;
+    public String password;
 
     public int getAge() {
         return age;
@@ -46,4 +47,6 @@ public class users {
     public void setName(String name) {
         this.name = name;
     }
+
+    
 }

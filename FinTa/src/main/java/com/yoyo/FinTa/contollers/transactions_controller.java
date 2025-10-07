@@ -5,6 +5,8 @@ import com.yoyo.FinTa.repo.transactionsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RestController
 public class transactions_controller {
@@ -15,6 +17,11 @@ public class transactions_controller {
     @GetMapping("/transactions")
     public Iterable<transactions> getTransactions(){
         return transRepo.findAll();
+    }
+
+    @GetMapping("/findbyuid")
+    public List<transactions> getTransactionsbyuid(@RequestBody int uid){
+        return transRepo.findAllbyuid(uid);
     }
 
     @PostMapping("/add-transaction")
